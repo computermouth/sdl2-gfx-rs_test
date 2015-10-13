@@ -1,0 +1,8 @@
+[package]
+name = "gfxtest"
+version = "0.1.0"
+authors = ["computermouth <computermouth@crunchbangplusplus.org>"]
+
+[dependencies]
+sdl2 = "0.9.1"
+sdl2_gfx = "0.6.3"
