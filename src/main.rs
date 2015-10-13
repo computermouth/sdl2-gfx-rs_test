@@ -14,7 +14,7 @@ fn main() {
 
     let sdl_context = sdl2::init().unwrap();
     let video_subsys = sdl_context.video().unwrap();
-    let window = video_subsys.window("rust-sdl2_gfx: draw line & FPSManager", SCREEN_WIDTH, SCREEN_HEIGHT)
+    let window = video_subsys.window("sdl2-gfx-rs_test", SCREEN_WIDTH, SCREEN_HEIGHT)
         .position_centered()
         .opengl()
         .build()
@@ -46,15 +46,11 @@ fn main() {
                 _ => {}
             }
         }
-        let vx = vec![100, 400, 400, 100];
-        let vy = vec![100, 100, 400, 400];
-        let color = pixels::Color::RGBA(255, 0, 0, 110);
-        let _ = renderer.filled_polygon(&vx, &vy, color);
         
-        let vx2 = vec![200, 500, 500, 200];
-        let vy2 = vec![200, 200, 500, 500];
-        let color2 = pixels::Color::RGBA(255, 0, 0, 255);
-        let _ = renderer.filled_polygon(&vx2, &vy2, color2);
+        let vx = vec![200, 500, 500, 200];
+        let vy = vec![200, 200, 500, 500];
+        let color = pixels::Color::RGBA(255, 0, 0, 255);
+        let _ = renderer.filled_polygon(&vx, &vy, color);
         
         renderer.present();
     }
