@@ -10,13 +10,6 @@ use sdl2_gfx::primitives::DrawRenderer;
 const SCREEN_WIDTH: u32 = 800;
 const SCREEN_HEIGHT: u32 = 600;
 
-// hadle the annoying Rect i32
-macro_rules! rect(
-    ($x:expr, $y:expr, $w:expr, $h:expr) => (
-        sdl2::rect::Rect::new($x as i32, $y as i32, $w as i32, $h as i32)
-    )
-);
-
 fn main() {
 
     let sdl_context = sdl2::init().unwrap();
@@ -31,10 +24,14 @@ fn main() {
 
     renderer.set_draw_color(pixels::Color::RGB(0, 0, 0));
     renderer.clear();
+    renderer.present();
 
     let mut events = sdl_context.event_pump().unwrap();
 	
     'main: loop {
+		renderer.set_draw_color(pixels::Color::RGB(0, 0, 0));
+		renderer.clear();
+		
         for event in events.poll_iter() {
             match event {
 
@@ -51,12 +48,12 @@ fn main() {
         }
         let vx = vec![100, 400, 400, 100];
         let vy = vec![100, 100, 400, 400];
-        let color = pixels::Color::RGBA(255, 0, 0, 100);
+        let color = pixels::Color::RGBA(255, 0, 0, 110);
         let _ = renderer.filled_polygon(&vx, &vy, color);
         
         let vx2 = vec![200, 500, 500, 200];
         let vy2 = vec![200, 200, 500, 500];
-        let color2 = pixels::Color::RGBA(255, 0, 0, 10);
+        let color2 = pixels::Color::RGBA(255, 0, 0, 255);
         let _ = renderer.filled_polygon(&vx2, &vy2, color2);
         
         renderer.present();
