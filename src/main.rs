@@ -90,19 +90,33 @@ fn main() {
             }
         }
         
-        let color = pixels::Color::RGBA(255, 0, 0, 255);
+        let mut color = pixels::Color::RGBA(249, 188, 188, 255);
         let _ = renderer.filled_polygon(&faceX, &faceY, color);
+        color = pixels::Color::RGBA(148, 101, 101, 255);
         let _ = renderer.filled_polygon(&leftNostrilX, &leftNostrilY, color);
+        color = pixels::Color::RGBA(148, 101, 101, 255);
         let _ = renderer.filled_polygon(&rightNostrilX, &rightNostrilY, color);
+        color = pixels::Color::RGBA(249, 249, 249, 255);
         let _ = renderer.filled_polygon(&lipsX, &lipsY, color);
+        color = pixels::Color::RGBA(249, 249, 249, 255);
         let _ = renderer.filled_polygon(&teethX, &teethY, color);
-        let _ = renderer.filled_polygon(&leftBrowX, &rightBrowY, color);
+        color = pixels::Color::RGBA(191, 148, 0, 255);
+        let _ = renderer.filled_polygon(&leftBrowX, &leftBrowY, color);
+        color = pixels::Color::RGBA(191, 148, 0, 255);
+        let _ = renderer.filled_polygon(&rightBrowX, &rightBrowY, color);
+        color = pixels::Color::RGBA(249, 249, 249, 255);
         let _ = renderer.filled_polygon(&leftWhiteX, &leftWhiteY, color);
+        color = pixels::Color::RGBA(249, 249, 249, 255);
         let _ = renderer.filled_polygon(&rightWhiteX, &rightWhiteY, color);
+        color = pixels::Color::RGBA(100, 157, 97, 255);
         let _ = renderer.filled_polygon(&leftIrisX, &leftIrisY, color);
+        color = pixels::Color::RGBA(100, 157, 97, 255);
         let _ = renderer.filled_polygon(&rightIrisX, &rightIrisY, color);
+        color = pixels::Color::RGBA(10, 10, 10, 255);
         let _ = renderer.filled_polygon(&leftPupilX, &leftPupilY, color);
+        color = pixels::Color::RGBA(10, 10, 10, 255);
         let _ = renderer.filled_polygon(&rightPupilX, &rightPupilY, color);
+        color = pixels::Color::RGBA(180, 155, 0, 255);
         let _ = renderer.filled_polygon(&hairX, &hairY, color);
         
         renderer.present();
