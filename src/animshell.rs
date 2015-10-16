@@ -4,11 +4,11 @@ use sdl2::pixels;
 
 
 pub struct Anim {
-	anim: Vec<Slide>
+	pub anim: Vec<Slide>
 }
 
 pub struct Slide {
-	shapes: Vec<Shape>
+	pub shapes: Vec<Shape>
 }
 
 pub struct Shape {
