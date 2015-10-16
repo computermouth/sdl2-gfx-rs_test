@@ -126,64 +126,11 @@ fn main() {
         }
         
         for i in 0..face_anim.slides[0].shapes.len(){
-			println!("{}", i);	
+			let _ = renderer.filled_polygon(
+				&face_anim.slides[0].shapes[i].x, 
+				&face_anim.slides[0].shapes[i].y, 
+				face_anim.slides[0].shapes[i].color);
 		}
-        let _ = renderer.filled_polygon(
-			&face_anim.slides[0].shapes[0].x, 
-			&face_anim.slides[0].shapes[0].y, 
-			face_anim.slides[0].shapes[0].color);
-        let _ = renderer.filled_polygon(
-			&face_anim.slides[0].shapes[1].x, 
-			&face_anim.slides[0].shapes[1].y, 
-			face_anim.slides[0].shapes[1].color);
-        let _ = renderer.filled_polygon(
-			&face_anim.slides[0].shapes[2].x, 
-			&face_anim.slides[0].shapes[2].y, 
-			face_anim.slides[0].shapes[2].color);
-        let _ = renderer.filled_polygon(
-			&face_anim.slides[0].shapes[3].x, 
-			&face_anim.slides[0].shapes[3].y, 
-			face_anim.slides[0].shapes[3].color);
-        let _ = renderer.filled_polygon(
-			&face_anim.slides[0].shapes[4].x, 
-			&face_anim.slides[0].shapes[4].y, 
-			face_anim.slides[0].shapes[4].color);
-        let _ = renderer.filled_polygon(
-			&face_anim.slides[0].shapes[5].x, 
-			&face_anim.slides[0].shapes[5].y, 
-			face_anim.slides[0].shapes[5].color);
-        let _ = renderer.filled_polygon(
-			&face_anim.slides[0].shapes[6].x, 
-			&face_anim.slides[0].shapes[6].y, 
-			face_anim.slides[0].shapes[6].color);
-        let _ = renderer.filled_polygon(
-			&face_anim.slides[0].shapes[7].x, 
-			&face_anim.slides[0].shapes[7].y, 
-			face_anim.slides[0].shapes[7].color);
-        let _ = renderer.filled_polygon(
-			&face_anim.slides[0].shapes[8].x, 
-			&face_anim.slides[0].shapes[8].y, 
-			face_anim.slides[0].shapes[8].color);
-        let _ = renderer.filled_polygon(
-			&face_anim.slides[0].shapes[9].x, 
-			&face_anim.slides[0].shapes[9].y, 
-			face_anim.slides[0].shapes[9].color);
-        let _ = renderer.filled_polygon(
-			&face_anim.slides[0].shapes[10].x, 
-			&face_anim.slides[0].shapes[10].y, 
-			face_anim.slides[0].shapes[10].color);
-        let _ = renderer.filled_polygon(
-			&face_anim.slides[0].shapes[11].x, 
-			&face_anim.slides[0].shapes[11].y, 
-			face_anim.slides[0].shapes[11].color);
-        let _ = renderer.filled_polygon(
-			&face_anim.slides[0].shapes[12].x, 
-			&face_anim.slides[0].shapes[12].y, 
-			face_anim.slides[0].shapes[12].color);
-        let _ = renderer.filled_polygon(
-			&face_anim.slides[0].shapes[13].x, 
-			&face_anim.slides[0].shapes[13].y, 
-			face_anim.slides[0].shapes[13].color);
         
         renderer.present();
     }
