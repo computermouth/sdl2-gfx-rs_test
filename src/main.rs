@@ -85,6 +85,10 @@ fn main() {
     let hair_color = pixels::Color::RGBA(180, 155, 0, 255);
     let hair = animshell::Shape { x: hair_x, y: hair_y, color: hair_color};
 
+	let face_slide_0 = animshell::Slide { shapes: (vec![face, left_nostril, 
+		right_nostril, lips, teeth, left_brow, right_brow, left_white, right_white,
+		left_iris, right_iris, left_pupil, right_pupil, hair])};
+	let face_anim = animshell::Anim { slides: (vec![face_slide_0])};
 
     let sdl_context = sdl2::init().unwrap();
     let video_subsys = sdl_context.video().unwrap();
@@ -121,21 +125,65 @@ fn main() {
             }
         }
         
-        
-        let _ = renderer.filled_polygon(&face.x, &face.y, face.color);
-        let _ = renderer.filled_polygon(&left_nostril.x, &left_nostril.y, left_nostril.color);
-        let _ = renderer.filled_polygon(&right_nostril.x, &right_nostril.y, right_nostril.color);
-        let _ = renderer.filled_polygon(&lips.x, &lips.y, lips.color);
-        let _ = renderer.filled_polygon(&teeth.x, &teeth.y, teeth.color);
-        let _ = renderer.filled_polygon(&left_brow.x, &left_brow.y, left_brow.color);
-        let _ = renderer.filled_polygon(&right_brow.x, &right_brow.y, right_brow.color);
-        let _ = renderer.filled_polygon(&left_white.x, &left_white.y, left_white.color);
-        let _ = renderer.filled_polygon(&right_white.x, &right_white.y, right_white.color);
-        let _ = renderer.filled_polygon(&left_iris.x, &left_iris.y, left_iris.color);
-        let _ = renderer.filled_polygon(&right_iris.x, &right_iris.y, right_iris.color);
-        let _ = renderer.filled_polygon(&left_pupil.x, &left_pupil.y, left_pupil.color);
-        let _ = renderer.filled_polygon(&right_pupil.x, &right_pupil.y, right_pupil.color);
-        let _ = renderer.filled_polygon(&hair.x, &hair.y, hair.color);
+        for i in 0..face_anim.slides[0].shapes.len(){
+			println!("{}", i);	
+		}
+        let _ = renderer.filled_polygon(
+			&face_anim.slides[0].shapes[0].x, 
+			&face_anim.slides[0].shapes[0].y, 
+			face_anim.slides[0].shapes[0].color);
+        let _ = renderer.filled_polygon(
+			&face_anim.slides[0].shapes[1].x, 
+			&face_anim.slides[0].shapes[1].y, 
+			face_anim.slides[0].shapes[1].color);
+        let _ = renderer.filled_polygon(
+			&face_anim.slides[0].shapes[2].x, 
+			&face_anim.slides[0].shapes[2].y, 
+			face_anim.slides[0].shapes[2].color);
+        let _ = renderer.filled_polygon(
+			&face_anim.slides[0].shapes[3].x, 
+			&face_anim.slides[0].shapes[3].y, 
+			face_anim.slides[0].shapes[3].color);
+        let _ = renderer.filled_polygon(
+			&face_anim.slides[0].shapes[4].x, 
+			&face_anim.slides[0].shapes[4].y, 
+			face_anim.slides[0].shapes[4].color);
+        let _ = renderer.filled_polygon(
+			&face_anim.slides[0].shapes[5].x, 
+			&face_anim.slides[0].shapes[5].y, 
+			face_anim.slides[0].shapes[5].color);
+        let _ = renderer.filled_polygon(
+			&face_anim.slides[0].shapes[6].x, 
+			&face_anim.slides[0].shapes[6].y, 
+			face_anim.slides[0].shapes[6].color);
+        let _ = renderer.filled_polygon(
+			&face_anim.slides[0].shapes[7].x, 
+			&face_anim.slides[0].shapes[7].y, 
+			face_anim.slides[0].shapes[7].color);
+        let _ = renderer.filled_polygon(
+			&face_anim.slides[0].shapes[8].x, 
+			&face_anim.slides[0].shapes[8].y, 
+			face_anim.slides[0].shapes[8].color);
+        let _ = renderer.filled_polygon(
+			&face_anim.slides[0].shapes[9].x, 
+			&face_anim.slides[0].shapes[9].y, 
+			face_anim.slides[0].shapes[9].color);
+        let _ = renderer.filled_polygon(
+			&face_anim.slides[0].shapes[10].x, 
+			&face_anim.slides[0].shapes[10].y, 
+			face_anim.slides[0].shapes[10].color);
+        let _ = renderer.filled_polygon(
+			&face_anim.slides[0].shapes[11].x, 
+			&face_anim.slides[0].shapes[11].y, 
+			face_anim.slides[0].shapes[11].color);
+        let _ = renderer.filled_polygon(
+			&face_anim.slides[0].shapes[12].x, 
+			&face_anim.slides[0].shapes[12].y, 
+			face_anim.slides[0].shapes[12].color);
+        let _ = renderer.filled_polygon(
+			&face_anim.slides[0].shapes[13].x, 
+			&face_anim.slides[0].shapes[13].y, 
+			face_anim.slides[0].shapes[13].color);
         
         renderer.present();
     }

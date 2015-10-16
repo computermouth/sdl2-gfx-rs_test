@@ -4,7 +4,7 @@ use sdl2::pixels;
 
 
 pub struct Anim {
-	pub anim: Vec<Slide>
+	pub slides: Vec<Slide>
 }
 
 pub struct Slide {
