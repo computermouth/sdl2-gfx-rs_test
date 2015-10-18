@@ -11,6 +11,7 @@ const SCREEN_WIDTH: u32 = 800;
 const SCREEN_HEIGHT: u32 = 600;
 
 mod animshell;
+mod god;
 
 
 fn main() {
